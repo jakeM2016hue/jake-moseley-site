@@ -1,0 +1,134 @@
+/* =========================================================
+   Jake's colorful tweaks on top of the Grayscale theme.
+   Change the colors here to restyle the whole page.
+   ========================================================= */
+:root {
+  --jm-indigo: #4f46e5;
+  --jm-violet: #7c3aed;
+  --jm-pink: #ec4899;
+  --jm-orange: #f97316;
+  --jm-teal: #14b8a6;
+  --jm-sky: #0ea5e9;
+  --jm-night: #1e1b4b;
+  --bs-primary-rgb: 124, 58, 237; /* makes .text-primary violet */
+  --bs-link-color: #7c3aed;
+  --bs-link-color-rgb: 124, 58, 237;
+  --bs-link-hover-color: #db2777;
+  --bs-link-hover-color-rgb: 219, 39, 119;
+}
+
+/* ---------- Header: photo with a sunset-colored overlay ---------- */
+.masthead {
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.85) 0%, rgba(236, 72, 153, 0.7) 55%, rgba(249, 115, 22, 0.75) 100%),
+    url("../assets/img/bg-masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.masthead h1,
+.masthead .h1 {
+  background: linear-gradient(#fff, rgba(255, 255, 255, 0.75));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: none;
+}
+.masthead h2,
+.masthead .h2 {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--jm-orange);
+  --bs-btn-border-color: var(--jm-orange);
+  --bs-btn-hover-bg: #ea580c;
+  --bs-btn-hover-border-color: #ea580c;
+  --bs-btn-active-bg: #c2410c;
+  --bs-btn-active-border-color: #c2410c;
+  --bs-btn-focus-shadow-rgb: 249, 115, 22;
+}
+
+/* ---------- Navigation ---------- */
+#mainNav .navbar-toggler {
+  color: var(--jm-violet);
+  border-color: var(--jm-violet);
+}
+@media (min-width: 992px) {
+  #mainNav .navbar-brand,
+  #mainNav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  #mainNav .nav-link:hover {
+    color: #fff;
+  }
+  #mainNav.navbar-shrink .navbar-brand,
+  #mainNav.navbar-shrink .nav-link {
+    color: #000;
+  }
+  #mainNav.navbar-shrink .nav-link:hover,
+  #mainNav.navbar-shrink .nav-link.active {
+    color: var(--jm-violet);
+  }
+  #mainNav.navbar-shrink .nav-link.active {
+    border-bottom-color: var(--jm-pink);
+  }
+}
+
+/* ---------- About ---------- */
+.about-section {
+  padding-bottom: 10rem;
+  background: linear-gradient(160deg, var(--jm-night) 0%, var(--jm-indigo) 55%, var(--jm-violet) 100%);
+}
+.about-section .text-white-50 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ---------- Projects ---------- */
+.projects-section {
+  background: linear-gradient(180deg, #fdf4ff 0%, #fff7ed 100%) !important;
+}
+@media (min-width: 992px) {
+  .projects-section .featured-text {
+    border-left-color: var(--jm-pink);
+  }
+}
+.project.bg-ocean {
+  background: linear-gradient(135deg, var(--jm-teal) 0%, var(--jm-sky) 50%, var(--jm-indigo) 100%);
+}
+.project.bg-sunset {
+  background: linear-gradient(135deg, var(--jm-pink) 0%, var(--jm-orange) 100%);
+}
+.project .text-white-50 {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+.project hr {
+  border-color: #fff;
+  border-width: 0.25rem;
+  width: 30%;
+  opacity: 0.6;
+}
+
+/* ---------- How It's Built ---------- */
+.contact-section {
+  background: linear-gradient(160deg, var(--jm-night) 0%, #312e81 100%) !important;
+  padding-bottom: 5rem;
+}
+.contact-section h2 {
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+.contact-section .card.accent-violet { border-bottom-color: var(--jm-violet); }
+.contact-section .card.accent-pink   { border-bottom-color: var(--jm-pink); }
+.contact-section .card.accent-orange { border-bottom-color: var(--jm-orange); }
+.contact-section .card.accent-violet hr { border-color: var(--jm-violet); }
+.contact-section .card.accent-pink hr   { border-color: var(--jm-pink); }
+.contact-section .card.accent-orange hr { border-color: var(--jm-orange); }
+.contact-section .card.accent-violet svg { color: var(--jm-violet) !important; }
+.contact-section .card.accent-pink svg   { color: var(--jm-pink) !important; }
+.contact-section .card.accent-orange svg { color: var(--jm-orange) !important; }
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--jm-night) !important;
+}
